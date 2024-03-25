@@ -44,7 +44,7 @@ print(f"Total cost with weekly payments: ${total_weekly:.2f}")
 
 # Plotting the differences
 payment_frequencies = ['Monthly', 'Bi-weekly', 'Weekly']
-total_costs = [total_monthly, total_bi_weekly, total_weekly]
+total_costs = [total - house_price for total in [total_monthly, total_bi_weekly, total_weekly]]
 
 plt.plot(payment_frequencies, total_costs, marker='o')
 plt.ylabel('Total Cost')
